@@ -1,0 +1,89 @@
+.gallery{
+		height: 100vh;
+
+	&__image{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__list{
+		width: 100%;
+		height: 100%;
+	}
+
+	&__list-item{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 1s;
+	
+		&--selected{
+			opacity: 1;
+		}
+	}
+
+	&__button-container{
+		width: 100%;
+		height: 80px;
+		position: absolute;
+		top: calc(50% - 40px);
+		left: 0;
+		z-index: 1;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__button{
+		font-size: 60px;
+		background-color: #eeeded;
+		cursor: pointer;
+			
+		&--arrowDisable{
+			pointer-events: none;
+			background-color: rgb(186, 178, 178);
+			opacity: 0.5;
+		}
+	}
+
+	&__dots-container{
+		width: 100%;
+		position: absolute;
+		top: 90%;
+		left: 0;
+	}
+
+	&__dots-list{
+		display: flex;
+		width: 100%;
+		height: 40px;
+		z-index: 1;
+		margin: 0 auto;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__dot-item{
+		list-style-type: none;
+		width: 20px;
+		height: 20px;
+		margin: 0 15px;
+	}
+
+	&__dot-button{
+		height: 20px;
+		width: 20px;
+		border-radius: 10px;
+		margin: 0 1px;
+		border: 2px solid black;
+		background-color: transparent;
+		cursor: pointer;
+
+		&--selected{
+			background-color: black;
+		}
+	}
+}
